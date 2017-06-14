@@ -6,8 +6,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { wrap as _wrap } from \\"import-inspector\\";
-_wrap(import(\\"./a\\"), {
+import { report as _report } from \\"import-inspector\\";
+_report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\"
 });
@@ -21,11 +21,11 @@ import(\\"./a\\")
       ↓ ↓ ↓ ↓ ↓ ↓
 
 import _path from \\"path\\";
-import { wrap as _wrap } from \\"import-inspector\\";
+import { report as _report } from \\"import-inspector\\";
 
 const _start = Date.now();
 
-_wrap(import(\\"./a\\"), {
+_report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\",
   serverSideRequirePath: _path.join(__dirname, \\"./a\\"),
@@ -41,8 +41,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { wrap as _wrap } from \\"import-inspector\\";
-_wrap(import(\\"./a\\"), {
+import { report as _report } from \\"import-inspector\\";
+_report(import(\\"./a\\"), {
   importedModulePath: \\"./a\\"
 });
 "
@@ -54,8 +54,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { wrap as _wrap } from \\"import-inspector\\";
-_wrap(import(\\"./a\\"), {
+import { report as _report } from \\"import-inspector\\";
+_report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\"
 });
@@ -68,8 +68,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { wrap as _wrap } from \\"import-inspector\\";
-_wrap(import(\\"./a\\"), {
+import { report as _report } from \\"import-inspector\\";
+_report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\"
 });
 "
@@ -81,8 +81,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { wrap as _wrap } from \\"import-inspector\\";
-_wrap(import(\\"./a\\"), {
+import { report as _report } from \\"import-inspector\\";
+_report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\"
 });
@@ -95,8 +95,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { wrap as _wrap } from \\"import-inspector\\";
-_wrap(import(\\"./a\\"), {
+import { report as _report } from \\"import-inspector\\";
+_report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\"
 });
@@ -110,8 +110,8 @@ import(\\"./a\\")
       ↓ ↓ ↓ ↓ ↓ ↓
 
 import _path from \\"path\\";
-import { wrap as _wrap } from \\"import-inspector\\";
-_wrap(import(\\"./a\\"), {
+import { report as _report } from \\"import-inspector\\";
+_report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\",
   serverSideRequirePath: _path.join(__dirname, \\"./a\\")
@@ -125,8 +125,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { wrap as _wrap } from \\"import-inspector\\";
-_wrap(import(\\"./a\\"), {
+import { report as _report } from \\"import-inspector\\";
+_report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\"
 });
@@ -139,8 +139,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { wrap as _wrap } from \\"import-inspector\\";
-_wrap(import(\\"./a\\"), {
+import { report as _report } from \\"import-inspector\\";
+_report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\",
   webpackRequireWeakId: () => require.resolveWeak(\\"./a\\")
@@ -154,8 +154,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { wrap as _wrap } from \\"import-inspector\\";
-_wrap(import(\\"./a\\"), {
+import { report as _report } from \\"import-inspector\\";
+_report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\"
 });
@@ -168,11 +168,11 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { wrap as _wrap } from \\"import-inspector\\";
+import { report as _report } from \\"import-inspector\\";
 
 const _start = Date.now();
 
-_wrap(import(\\"./a\\"), {
+_report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\",
   timeToImport: _start - Date.now()

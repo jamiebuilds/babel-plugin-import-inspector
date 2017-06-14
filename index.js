@@ -71,7 +71,7 @@ module.exports = function({types: t, template}) {
   }
 
   const visited = Symbol('visited');
-  const wrapId = Symbol('wrapId');
+  const reportId = Symbol('reportId');
 
   return {
     name: 'import-inspector',
@@ -89,8 +89,8 @@ module.exports = function({types: t, template}) {
           timeToImport: false
         }, this.opts);
 
-        if (!path.hub.file[wrapId]) {
-          path.hub.file[wrapId] = path.hub.file.addImport('import-inspector', 'wrap');
+        if (!path.hub.file[reportId]) {
+          path.hub.file[reportId] = path.hub.file.addImport('import-inspector', 'report');
         }
 
         let props = [];
@@ -102,7 +102,7 @@ module.exports = function({types: t, template}) {
         if (opts.timeToImport) props.push(timeToImport(path));
 
         path.parentPath.replaceWith(
-          t.callExpression(path.hub.file[wrapId], [
+          t.callExpression(path.hub.file[reportId], [
             path.parent,
             t.objectExpression(props)
           ])

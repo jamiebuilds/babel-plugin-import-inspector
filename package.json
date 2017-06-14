@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-import-inspector",
   "version": "1.0.0",
-  "description": "Babel plugin to wrap dynamic imports with import-inspector with metadata about the import",
+  "description": "Babel plugin to report dynamic imports with import-inspector with metadata about the import",
   "main": "index.js",
   "repository": "thejameskyle/babel-plugin-import-inspector",
   "author": "James Kyle <me@thejameskyle.com>",
@@ -17,6 +17,6 @@
     "jest": "^20.0.4"
   },
   "peerDependencies": {
-    "import-inspector": "^1.0.0"
+    "import-inspector": "^2.0.0"
   }
 }

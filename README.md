@@ -1,6 +1,8 @@
 # babel-plugin-import-inspector
 
-> Babel plugin to wrap dynamic imports with [import-inspector](https://github.com/thejameskyle/import-inspector) with metadata about the import
+> Babel plugin to report dynamic imports with
+> [import-inspector](https://github.com/thejameskyle/import-inspector) with
+> metadata about the import
 
 **Input:**
 
@@ -12,11 +14,11 @@ import("./module");
 
 ```js
 import path from "path";
-import { wrap } from "import-inspector";
+import { report } from "import-inspector";
 
 const start = Date.now();
 
-wrap(import("./module"), {
+report(import("./module"), {
   currentModuleFileName: "path/to/file.js",
   importedModulePath: "./module",
   serverSideRequirePath: path.join(__dirname, "./module"),
@@ -30,7 +32,7 @@ wrap(import("./module"), {
 #### `currentModuleFileName` (default: true)
 
 ```js
-wrap(import("./module"), {
+report(import("./module"), {
   currentModuleFileName: "path/to/file.js"
 });
 ```
@@ -38,7 +40,7 @@ wrap(import("./module"), {
 #### `importedModulePath` (default: true)
 
 ```js
-wrap(import("./module"), {
+report(import("./module"), {
   importedModulePath: "./module"
 });
 ```
@@ -48,7 +50,7 @@ wrap(import("./module"), {
 ```js
 import path from 'path';
 // ...
-wrap(import("./module"), {
+report(import("./module"), {
   serverSideRequirePath: path.join(__dirname, "./module")
 });
 ```
@@ -56,7 +58,7 @@ wrap(import("./module"), {
 #### `webpackRequireWeakId` (default: false)
 
 ```js
-wrap(import("./module"), {
+report(import("./module"), {
   webpackRequireWeakId: () => require.resolveWeak("./module")
 });
 ```
@@ -66,7 +68,7 @@ wrap(import("./module"), {
 ```js
 const start = Date.now();
 // ...
-wrap(import("./module"), {
+report(import("./module"), {
   timeToImport: start - Date.now()
 });
 ```
