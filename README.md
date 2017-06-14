@@ -1,6 +1,6 @@
 # babel-plugin-import-inspector
 
-> Babel plugin to wrap dynamic imports with import-inspector with metadata about the import
+> Babel plugin to wrap dynamic imports with [import-inspector](https://github.com/thejameskyle/import-inspector) with metadata about the import
 
 **Input:**
 
