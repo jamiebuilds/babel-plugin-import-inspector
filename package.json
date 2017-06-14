@@ -1,0 +1,22 @@
+{
+  "name": "babel-plugin-import-inspector",
+  "version": "0.0.0",
+  "description": "Babel plugin to wrap dynamic imports with import-inspector with metadata about the import",
+  "main": "index.js",
+  "repository": "thejameskyle/babel-plugin-import-inspector",
+  "author": "James Kyle <me@thejameskyle.com>",
+  "license": "MIT",
+  "files": [],
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "babel-plugin-tester": "^3.1.0",
+    "babylon-options": "^1.1.2",
+    "flow-bin": "^0.48.0",
+    "jest": "^20.0.4"
+  },
+  "peerDependencies": {
+    "import-inspector": "^1.0.0"
+  }
+}

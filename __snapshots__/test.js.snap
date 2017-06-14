@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1. defaults 1`] = `
+"
+import(\\"./a\\")
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { wrap as _wrap } from \\"import-inspector\\";
+_wrap(import(\\"./a\\"), {
+  currentModuleFileName: \\"test.js\\",
+  importedModulePath: \\"./a\\"
+});
+"
+`;
+
+exports[`2. all true 1`] = `
+"
+import(\\"./a\\")
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _path from \\"path\\";
+import { wrap as _wrap } from \\"import-inspector\\";
+
+const _start = Date.now();
+
+_wrap(import(\\"./a\\"), {
+  currentModuleFileName: \\"test.js\\",
+  importedModulePath: \\"./a\\",
+  serverSideRequirePath: _path.join(__dirname, \\"./a\\"),
+  webpackRequireWeakId: () => require.resolveWeak(\\"./a\\"),
+  timeToImport: _start - Date.now()
+});
+"
+`;
+
+exports[`3. currentModuleFileName: false 1`] = `
+"
+import(\\"./a\\")
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { wrap as _wrap } from \\"import-inspector\\";
+_wrap(import(\\"./a\\"), {
+  importedModulePath: \\"./a\\"
+});
+"
+`;
+
+exports[`4. currentModuleFileName: true 1`] = `
+"
+import(\\"./a\\")
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { wrap as _wrap } from \\"import-inspector\\";
+_wrap(import(\\"./a\\"), {
+  currentModuleFileName: \\"test.js\\",
+  importedModulePath: \\"./a\\"
+});
+"
+`;
+
+exports[`5. importedModulePath: false 1`] = `
+"
+import(\\"./a\\")
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { wrap as _wrap } from \\"import-inspector\\";
+_wrap(import(\\"./a\\"), {
+  currentModuleFileName: \\"test.js\\"
+});
+"
+`;
+
+exports[`6. importedModulePath: true 1`] = `
+"
+import(\\"./a\\")
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { wrap as _wrap } from \\"import-inspector\\";
+_wrap(import(\\"./a\\"), {
+  currentModuleFileName: \\"test.js\\",
+  importedModulePath: \\"./a\\"
+});
+"
+`;
+
+exports[`7. serverSideRequirePath: false 1`] = `
+"
+import(\\"./a\\")
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { wrap as _wrap } from \\"import-inspector\\";
+_wrap(import(\\"./a\\"), {
+  currentModuleFileName: \\"test.js\\",
+  importedModulePath: \\"./a\\"
+});
+"
+`;
+
+exports[`8. serverSideRequirePath: true 1`] = `
+"
+import(\\"./a\\")
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _path from \\"path\\";
+import { wrap as _wrap } from \\"import-inspector\\";
+_wrap(import(\\"./a\\"), {
+  currentModuleFileName: \\"test.js\\",
+  importedModulePath: \\"./a\\",
+  serverSideRequirePath: _path.join(__dirname, \\"./a\\")
+});
+"
+`;
+
+exports[`9. webpackRequireWeakId: false 1`] = `
+"
+import(\\"./a\\")
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { wrap as _wrap } from \\"import-inspector\\";
+_wrap(import(\\"./a\\"), {
+  currentModuleFileName: \\"test.js\\",
+  importedModulePath: \\"./a\\"
+});
+"
+`;
+
+exports[`10. webpackRequireWeakId: true 1`] = `
+"
+import(\\"./a\\")
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { wrap as _wrap } from \\"import-inspector\\";
+_wrap(import(\\"./a\\"), {
+  currentModuleFileName: \\"test.js\\",
+  importedModulePath: \\"./a\\",
+  webpackRequireWeakId: () => require.resolveWeak(\\"./a\\")
+});
+"
+`;
+
+exports[`11. timeToImport: false 1`] = `
+"
+import(\\"./a\\")
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { wrap as _wrap } from \\"import-inspector\\";
+_wrap(import(\\"./a\\"), {
+  currentModuleFileName: \\"test.js\\",
+  importedModulePath: \\"./a\\"
+});
+"
+`;
+
+exports[`12. timeToImport: true 1`] = `
+"
+import(\\"./a\\")
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { wrap as _wrap } from \\"import-inspector\\";
+
+const _start = Date.now();
+
+_wrap(import(\\"./a\\"), {
+  currentModuleFileName: \\"test.js\\",
+  importedModulePath: \\"./a\\",
+  timeToImport: _start - Date.now()
+});
+"
+`;
