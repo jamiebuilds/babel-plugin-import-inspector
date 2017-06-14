@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-import-inspector",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Babel plugin to wrap dynamic imports with import-inspector with metadata about the import",
   "main": "index.js",
   "repository": "thejameskyle/babel-plugin-import-inspector",
