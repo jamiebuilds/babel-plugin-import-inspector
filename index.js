@@ -1,5 +1,7 @@
 'use strict';
 
+const syntax = require('babel-plugin-syntax-dynamic-import')
+
 module.exports = function({types: t, template}) {
   function currentModuleFileName(path) {
     return t.objectProperty(
@@ -11,7 +13,7 @@ module.exports = function({types: t, template}) {
   function importedModulePath(path) {
     return t.objectProperty(
       t.identifier('importedModulePath'),
-      path.parent.arguments[0]
+      path.node.arguments[0]
     );
   }
 
@@ -21,7 +23,7 @@ module.exports = function({types: t, template}) {
     return t.objectProperty(
       t.identifier('webpackRequireWeakId'),
       webpackTemplate({
-        MODULE: path.parent.arguments[0]
+        MODULE: path.node.arguments[0]
       }).expression
     );
   }
@@ -38,7 +40,7 @@ module.exports = function({types: t, template}) {
       t.identifier('serverSideRequirePath'),
       serverTemplate({
         PATH: path.hub.file[pathId],
-        MODULE: path.parent.arguments[0]
+        MODULE: path.node.arguments[0]
       }).expression
     );
   }
@@ -74,14 +76,17 @@ module.exports = function({types: t, template}) {
   const reportId = Symbol('reportId');
 
   return {
+    inherits: syntax,
     name: 'import-inspector',
+
     visitor: {
-      Import(path) {
-        if (path[visited]) return;
+      CallExpression(path) {
+        if (path.node.callee.type !== 'Import') return;
+        if (path.node[visited]) return;
 
-        path[visited] = true;
+        path.node[visited] = true;
 
-        let opts = Object.assign({
+        const opts = Object.assign({
           currentModuleFileName: true,
           importedModulePath: true,
           serverSideRequirePath: false,
@@ -93,7 +98,7 @@ module.exports = function({types: t, template}) {
           path.hub.file[reportId] = path.hub.file.addImport('import-inspector', 'report');
         }
 
-        let props = [];
+        const props = [];
 
         if (opts.currentModuleFileName) props.push(currentModuleFileName(path));
         if (opts.importedModulePath) props.push(importedModulePath(path));
@@ -101,9 +106,9 @@ module.exports = function({types: t, template}) {
         if (opts.webpackRequireWeakId) props.push(webpackRequireWeakId(path));
         if (opts.timeToImport) props.push(timeToImport(path));
 
-        path.parentPath.replaceWith(
+        path.replaceWith(
           t.callExpression(path.hub.file[reportId], [
-            path.parent,
+            path.node,
             t.objectExpression(props)
           ])
         );
