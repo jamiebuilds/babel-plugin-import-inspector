@@ -6,7 +6,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { report as _report } from \\"import-inspector\\";
+var _report = require(\\"import-inspector\\").report;
+
 _report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\"
@@ -20,10 +21,13 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import _path from \\"path\\";
-import { report as _report } from \\"import-inspector\\";
+var _path = _interopRequireDefault(require(\\"path\\")).default;
+
+var _report = require(\\"import-inspector\\").report;
 
 const _start = Date.now();
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
@@ -41,7 +45,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { report as _report } from \\"import-inspector\\";
+var _report = require(\\"import-inspector\\").report;
+
 _report(import(\\"./a\\"), {
   importedModulePath: \\"./a\\"
 });
@@ -54,7 +59,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { report as _report } from \\"import-inspector\\";
+var _report = require(\\"import-inspector\\").report;
+
 _report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\"
@@ -68,7 +74,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { report as _report } from \\"import-inspector\\";
+var _report = require(\\"import-inspector\\").report;
+
 _report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\"
 });
@@ -81,7 +88,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { report as _report } from \\"import-inspector\\";
+var _report = require(\\"import-inspector\\").report;
+
 _report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\"
@@ -95,7 +103,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { report as _report } from \\"import-inspector\\";
+var _report = require(\\"import-inspector\\").report;
+
 _report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\"
@@ -109,8 +118,12 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import _path from \\"path\\";
-import { report as _report } from \\"import-inspector\\";
+var _path = _interopRequireDefault(require(\\"path\\")).default;
+
+var _report = require(\\"import-inspector\\").report;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 _report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\",
@@ -125,7 +138,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { report as _report } from \\"import-inspector\\";
+var _report = require(\\"import-inspector\\").report;
+
 _report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\"
@@ -139,7 +153,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { report as _report } from \\"import-inspector\\";
+var _report = require(\\"import-inspector\\").report;
+
 _report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\",
@@ -154,7 +169,8 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { report as _report } from \\"import-inspector\\";
+var _report = require(\\"import-inspector\\").report;
+
 _report(import(\\"./a\\"), {
   currentModuleFileName: \\"test.js\\",
   importedModulePath: \\"./a\\"
@@ -168,7 +184,7 @@ import(\\"./a\\")
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { report as _report } from \\"import-inspector\\";
+var _report = require(\\"import-inspector\\").report;
 
 const _start = Date.now();
 

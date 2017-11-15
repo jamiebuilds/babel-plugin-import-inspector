@@ -1,5 +1,7 @@
 'use strict';
 
+const importsHelper = require('@babel/helper-module-imports');
+
 module.exports = function({types: t, template}) {
   function currentModuleFileName(path) {
     return t.objectProperty(
@@ -31,7 +33,7 @@ module.exports = function({types: t, template}) {
 
   function serverSideRequirePath(path) {
     if (!path.hub.file[pathId]) {
-      path.hub.file[pathId] = path.hub.file.addImport('path', 'default', 'path');
+      path.hub.file[pathId] = importsHelper.addDefault(path, 'path', { nameHint: 'path' });
     }
 
     return t.objectProperty(
@@ -90,7 +92,7 @@ module.exports = function({types: t, template}) {
         }, this.opts);
 
         if (!path.hub.file[reportId]) {
-          path.hub.file[reportId] = path.hub.file.addImport('import-inspector', 'report');
+          path.hub.file[reportId] = importsHelper.addNamed(path, 'report', 'import-inspector');
         }
 
         let props = [];
